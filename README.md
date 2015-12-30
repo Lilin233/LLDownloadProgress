@@ -1,4 +1,6 @@
 # LLDownloadProgress
+## Screenshots
+![LLDownloadProgress](https://github.com/Lilin233/LLDownloadProgress/blob/master/LLDownloadProgress/screenshots.gif)
 ## Usage
 1. 初始化一个按钮  <br/>
 ```
