@@ -13,16 +13,15 @@ class ViewController: UIViewController, ProgressAnimationDelegate {
     var downloadButtonView:DownloadButtonView?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.init(white: 0.9, alpha: 1)
         self.addDownloadButtonView()
         self.addResetButton()
     }
     
     //MARK: - Add SubViews
     func addDownloadButtonView(){
-        self.downloadButtonView = DownloadButtonView.init(frame: CGRectMake(0, 0, kDownloadButtonWidth, kDownloadButtonWidth))
+        self.downloadButtonView = DownloadButtonView.init(frame: CGRectMake((kScreenWidth - kDownloadButtonWidth) / 2, 200, kDownloadButtonWidth, kDownloadButtonWidth))
         self.downloadButtonView?.progressDelegate = self
-        self.downloadButtonView?.center = self.view.center
         self.view.addSubview(self.downloadButtonView!)
         
         let tapGesture = UITapGestureRecognizer.init(target: self, action: "downloadtapGesture")
@@ -76,6 +75,7 @@ class ViewController: UIViewController, ProgressAnimationDelegate {
     }
     // MARK: - ProgressAnimationDelegate
     func progressCompleted(){
+        self.downloadButtonView?.userInteractionEnabled = false
         print("Download Finished")
     }
     
