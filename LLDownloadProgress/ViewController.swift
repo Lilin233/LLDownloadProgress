@@ -15,6 +15,7 @@ class ViewController: UIViewController, ProgressAnimationDelegate {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         self.addDownloadButtonView()
+        self.addResetButton()
     }
     
     //MARK: - Add SubViews
@@ -27,11 +28,28 @@ class ViewController: UIViewController, ProgressAnimationDelegate {
         let tapGesture = UITapGestureRecognizer.init(target: self, action: "downloadtapGesture")
         self.downloadButtonView?.addGestureRecognizer(tapGesture)
     }
-
+    func addResetButton(){
+        let resetButton = UIButton.init(frame: CGRectMake((kScreenWidth - 100) / 2, (downloadButtonView?.bottom)! + 100, 100, 40))
+        resetButton.layer.cornerRadius = 20
+        resetButton.layer.masksToBounds = true
+        resetButton.backgroundColor = UIColor.init(colorLiteralRed: 0.169, green: 0.176, blue: 0.224, alpha: 1)
+        resetButton.setTitle("Reset", forState: UIControlState.Normal)
+        resetButton.addTarget(self, action: "resetProgress", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(resetButton)
+    }
+    
+    //MARK: - Action
     func downloadtapGesture(){
         self.downloadButtonView?.startDownload()
         self.downloadFile()
     }
+    func resetProgress(){
+        self.downloadButtonView?.removeFromSuperview()
+        self.downloadButtonView = nil
+        self.addDownloadButtonView()
+    }
+    
+    //MAKR: - Private Method
     func downloadFile(){
     self.progressItem(0.3)
     self.performSelector("progress", withObject: nil, afterDelay: 0.4)

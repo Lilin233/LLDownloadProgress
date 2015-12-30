@@ -7,7 +7,7 @@
     "C59ADA7C0EB15EC7D021054981CB6B38F29C937C+++92C0EDF" : 0,
     "E3F539F2A389F027501E1B5A861C95A75FF89068+++E629D00" : 0,
     "C59ADA7C0EB15EC7D021054981CB6B38F29C937C+++54D3FB2" : 0,
-    "E3F539F2A389F027501E1B5A861C95A75FF89068+++F7AA03A" : 0,
+    "C59ADA7C0EB15EC7D021054981CB6B38F29C937C+++F7AA03A" : 0,
     "E3F539F2A389F027501E1B5A861C95A75FF89068+++C3381A5" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EFF8854B-ECDD-4A4A-9A6E-69E5B0612522",
@@ -15,7 +15,7 @@
     "C59ADA7C0EB15EC7D021054981CB6B38F29C937C+++92C0EDF" : "..",
     "E3F539F2A389F027501E1B5A861C95A75FF89068+++E629D00" : "Demo\/",
     "C59ADA7C0EB15EC7D021054981CB6B38F29C937C+++54D3FB2" : "",
-    "E3F539F2A389F027501E1B5A861C95A75FF89068+++F7AA03A" : "",
+    "C59ADA7C0EB15EC7D021054981CB6B38F29C937C+++F7AA03A" : "",
     "E3F539F2A389F027501E1B5A861C95A75FF89068+++C3381A5" : "LLDownloadProgress\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "LLDownloadProgress",
@@ -35,17 +35,17 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lilin233\/LLDownloadProgress.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C59ADA7C0EB15EC7D021054981CB6B38F29C937C+++F7AA03A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lilin233\/LLDownloadProgress.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E3F539F2A389F027501E1B5A861C95A75FF89068+++C3381A5"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lilin233\/LLDownloadProgress.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E3F539F2A389F027501E1B5A861C95A75FF89068+++E629D00"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Lilin233\/LLDownloadProgress.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E3F539F2A389F027501E1B5A861C95A75FF89068+++F7AA03A"
     }
   ]
 }
