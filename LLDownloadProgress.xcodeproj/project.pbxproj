@@ -13,9 +13,8 @@
 		FA84166F1C33B88C00AA8554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA84166E1C33B88C00AA8554 /* Assets.xcassets */; };
 		FA8416721C33B88C00AA8554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8416701C33B88C00AA8554 /* LaunchScreen.storyboard */; };
 		FA84167A1C33BA1C00AA8554 /* DownloadButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8416791C33BA1C00AA8554 /* DownloadButtonView.swift */; };
-		FA84167C1C33BA3400AA8554 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84167B1C33BA3400AA8554 /* TriangleView.swift */; };
 		FA8416821C33BAE500AA8554 /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8416811C33BAE500AA8554 /* UIViewEx.swift */; };
-		FA8416841C33BB0400AA8554 /* BCCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8416831C33BB0400AA8554 /* BCCommon.swift */; };
+		FA8416841C33BB0400AA8554 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8416831C33BB0400AA8554 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +26,9 @@
 		FA8416711C33B88C00AA8554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8416731C33B88C00AA8554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8416791C33BA1C00AA8554 /* DownloadButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadButtonView.swift; sourceTree = "<group>"; };
-		FA84167B1C33BA3400AA8554 /* TriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		FA84167D1C33BA6E00AA8554 /* LLDownloadProgress-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LLDownloadProgress-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA8416811C33BAE500AA8554 /* UIViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewEx.swift; path = LLDownloadProgress/UIViewEx.swift; sourceTree = "<group>"; };
-		FA8416831C33BB0400AA8554 /* BCCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BCCommon.swift; path = LLDownloadProgress/BCCommon.swift; sourceTree = "<group>"; };
+		FA8416831C33BB0400AA8554 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = LLDownloadProgress/Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,27 +49,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA0358001C33F3BA009B3817 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				FA8416671C33B88C00AA8554 /* AppDelegate.swift */,
+				FA8416691C33B88C00AA8554 /* ViewController.swift */,
+				FA84166E1C33B88C00AA8554 /* Assets.xcassets */,
+				FA84166B1C33B88C00AA8554 /* Main.storyboard */,
+				FA8416701C33B88C00AA8554 /* LaunchScreen.storyboard */,
+				FA8416731C33B88C00AA8554 /* Info.plist */,
+				FA84167D1C33BA6E00AA8554 /* LLDownloadProgress-Bridging-Header.h */,
+			);
+			name = Demo;
+			path = LLDownloadProgress;
+			sourceTree = "<group>";
+		};
 		FA81287A1C33BEA50062DA72 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				FA8416831C33BB0400AA8554 /* BCCommon.swift */,
+				FA8416831C33BB0400AA8554 /* Common.swift */,
 				FA8416811C33BAE500AA8554 /* UIViewEx.swift */,
 			);
 			name = Extension;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		FA81287B1C33BF730062DA72 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resource;
-			sourceTree = "<group>";
-		};
 		FA84165B1C33B88C00AA8554 = {
 			isa = PBXGroup;
 			children = (
 				FA8416661C33B88C00AA8554 /* LLDownloadProgress */,
+				FA0358001C33F3BA009B3817 /* Demo */,
 				FA8416651C33B88C00AA8554 /* Products */,
 				D20CE3C7464BA9EDEAA4EAD8 /* Frameworks */,
 			);
@@ -88,17 +95,8 @@
 		FA8416661C33B88C00AA8554 /* LLDownloadProgress */ = {
 			isa = PBXGroup;
 			children = (
-				FA81287B1C33BF730062DA72 /* Resource */,
 				FA81287A1C33BEA50062DA72 /* Extension */,
-				FA8416671C33B88C00AA8554 /* AppDelegate.swift */,
-				FA8416691C33B88C00AA8554 /* ViewController.swift */,
-				FA84167B1C33BA3400AA8554 /* TriangleView.swift */,
 				FA8416791C33BA1C00AA8554 /* DownloadButtonView.swift */,
-				FA84166B1C33B88C00AA8554 /* Main.storyboard */,
-				FA84166E1C33B88C00AA8554 /* Assets.xcassets */,
-				FA8416701C33B88C00AA8554 /* LaunchScreen.storyboard */,
-				FA8416731C33B88C00AA8554 /* Info.plist */,
-				FA84167D1C33BA6E00AA8554 /* LLDownloadProgress-Bridging-Header.h */,
 			);
 			path = LLDownloadProgress;
 			sourceTree = "<group>";
@@ -175,10 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA84167A1C33BA1C00AA8554 /* DownloadButtonView.swift in Sources */,
-				FA8416841C33BB0400AA8554 /* BCCommon.swift in Sources */,
+				FA8416841C33BB0400AA8554 /* Common.swift in Sources */,
 				FA8416821C33BAE500AA8554 /* UIViewEx.swift in Sources */,
 				FA84166A1C33B88C00AA8554 /* ViewController.swift in Sources */,
-				FA84167C1C33BA3400AA8554 /* TriangleView.swift in Sources */,
 				FA8416681C33B88C00AA8554 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

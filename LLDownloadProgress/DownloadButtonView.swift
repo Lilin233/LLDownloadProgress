@@ -40,16 +40,12 @@ class DownloadButtonView: UIView {
             return
         }
         
-        //因为要使用shrokeEnd属性，所以需要使用shapeLayer
         shapeLayer = CAShapeLayer.init()
         let progressBeizier = UIBezierPath.init()
         progressBeizier.moveToPoint(CGPointMake(kProgressBarHeight / 2, kProgressBarHeight / 2))
         progressBeizier.addLineToPoint(CGPointMake(self.bounds.size.width - kProgressBarHeight / 2, kProgressBarHeight / 2))
         
-        //通过贝塞尔曲线绘制shapelayer的路径
         self.shapeLayer!.path = progressBeizier.CGPath
-        
-        //设置圆角
         self.shapeLayer!.lineCap = kCALineCapRound
         self.shapeLayer!.lineWidth = kProgressBarHeight - 6
         self.shapeLayer!.strokeColor = UIColor.whiteColor().CGColor
@@ -57,8 +53,6 @@ class DownloadButtonView: UIView {
         
     }
     func downloadItem(progress: Double){
-        //添加动画
-        //strokeEnd（多用于进度条动画）
         CATransaction.begin()
         let progressAnimation = CABasicAnimation.init(keyPath: "strokeEnd")
         if self.shapeLayer?.animationKeys()?.count > 0{
@@ -80,36 +74,6 @@ class DownloadButtonView: UIView {
             self.downloadLable.hidden = true
         }
     }
-    //修改按钮的bounds（形状）
-//    override func animationDidStart(anim: CAAnimation) {
-//
-//    }
-//    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-//        let animationName = anim.valueForKey("animationName")
-//        if (animationName?.isEqualToString("progressAnimation") != nil){
-//            UIView.animateWithDuration(0.3, animations: { () -> Void in
-//                self.shapeLayer?.opacity = 0
-//                }, completion: { (Bool) -> Void in
-//
-//                    self.layer.removeAllAnimations()
-//                    let cornerAnimation = CABasicAnimation.init(keyPath: "cornerRadius")
-//                    self.layer.cornerRadius = 80
-//                    cornerAnimation.fromValue = 25
-//                    cornerAnimation.duration = 0.1
-//                    cornerAnimation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
-//                    self.layer.addAnimation(cornerAnimation, forKey: nil)
-//                    
-//                    UIView.animateWithDuration(0.2, animations: { () -> Void in
-//                        self.bounds = CGRectMake(0, 0, 160, 160)
-//                        }, completion: { (Bool) -> Void in
-//                            self.layer .removeAllAnimations()
-//                            self .checkAnimation()
-//                    })
-//                    
-//            })
-//        }
-//
-//    }
     func downloadCompleted(){
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.shapeLayer?.opacity = 0
@@ -139,10 +103,8 @@ class DownloadButtonView: UIView {
         
         checkShapeLayer.path = checkBezier.CGPath
         
-        //两端起始点样式
         checkShapeLayer.lineCap = kCALineCapRound
         
-        //折角样式
         checkShapeLayer.lineJoin = kCALineJoinRound
         checkShapeLayer.strokeColor = UIColor.whiteColor().CGColor
         checkShapeLayer.fillColor = UIColor.clearColor().CGColor

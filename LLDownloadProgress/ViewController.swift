@@ -11,7 +11,6 @@ let kDownloadButtonWidth: CGFloat = 160
 class ViewController: UIViewController, ProgressAnimationDelegate {
 
     var downloadButtonView:DownloadButtonView?
-    var triangleView: TriangleView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
