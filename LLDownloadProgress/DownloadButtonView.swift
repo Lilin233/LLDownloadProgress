@@ -22,7 +22,11 @@ class DownloadButtonView: UIView {
     override init(frame: CGRect) {
         self.orignalRect = frame
         super.init(frame: frame)
+        self.backgroundColor = UIColor.init(colorLiteralRed: 0.169, green: 0.176, blue: 0.224, alpha: 1)
+        self.layer.cornerRadius = self.height / 2;
+        self.layer.masksToBounds = true
         self.addDownloadLabel()
+
     }
     func addDownloadLabel(){
         downloadLable = UILabel.init(frame: CGRectMake(0, 0, self.width, self.height))

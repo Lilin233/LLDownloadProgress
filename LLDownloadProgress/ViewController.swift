@@ -21,10 +21,7 @@ class ViewController: UIViewController, ProgressAnimationDelegate {
     func addDownloadButtonView(){
         self.downloadButtonView = DownloadButtonView.init(frame: CGRectMake(0, 0, kDownloadButtonWidth, kDownloadButtonWidth))
         self.downloadButtonView?.progressDelegate = self
-        self.downloadButtonView?.backgroundColor = UIColor.init(colorLiteralRed: 0.169, green: 0.176, blue: 0.224, alpha: 1)
         self.downloadButtonView?.center = self.view.center
-        self.downloadButtonView?.layer.cornerRadius = kDownloadButtonWidth / 2;
-        self.downloadButtonView?.layer.masksToBounds = true
         self.view.addSubview(self.downloadButtonView!)
         
         let tapGesture = UITapGestureRecognizer.init(target: self, action: "downloadtapGesture")
